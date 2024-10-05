@@ -2,33 +2,57 @@
 <html lang="my">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MK Counter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gaming Theme Counter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: #0b0c10;
+            color: #c5c6c7;
             text-align: center;
-            margin-top: 50px;
+            padding-top: 50px;
         }
-        #counter {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
+
         button {
+            background-color: #66fcf1;
+            color: #1f2833;
+            border: none;
             padding: 10px 20px;
-            font-size: 1em;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a29e;
+        }
+
+        #counter {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #66fcf1;
         }
     </style>
 </head>
 <body>
-    <div id="counter">0</div>
-    <button onclick="incrementCounter()">+1</button>
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup>
+                    <h2>Gaming Counter</h2>
+                    <h3>Press the button to increase the score!</h3>
+                </hgroup>
+                <p id="counter">0</p>
+                <button onclick="increaseCounter()">+1 တိုးမည်</button>
+            </section>
+        </div>
+    </main>
 
     <script>
         let count = 0;
-        function incrementCounter() {
+
+        function increaseCounter() {
             count++;
-            document.getElementById('counter').innerText = count;
+            document.getElementById('counter').textContent = count;
         }
     </script>
 </body>
