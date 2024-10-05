@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #counter {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">0</div>
+    <button onclick="incrementCounter()">+1</button>
+
+    <script>
+        let count = 0;
+        function incrementCounter() {
+            count++;
+            document.getElementById('counter').innerText = count;
+        }
+    </script>
+</body>
+</html>
